@@ -1,0 +1,265 @@
+body {
+	background-color: #ccc;
+	background-image: url(../img/global-bg.jpg);
+	font-family: "Roboto",sans-serif;
+
+	.wrap {
+		.inner-wrap {
+			width: 70%;
+			margin: 0 auto;
+			text-align: center;
+			box-sizing: border-box;
+			padding: 0 5%;    
+			padding-bottom: 15%;
+			padding-top: 1%;
+			
+			background: #cbe8ff; /* Old browsers */
+			/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+			background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSI0OSUiIHN0b3AtY29sb3I9IiNjYmU4ZmYiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSI0OSUiIHN0b3AtY29sb3I9IiNjYmU4ZmYiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMDA2ZWNjIiBzdG9wLW9wYWNpdHk9IjEiLz4KICA8L2xpbmVhckdyYWRpZW50PgogIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjZ3JhZC11Y2dnLWdlbmVyYXRlZCkiIC8+Cjwvc3ZnPg==);
+			background: -moz-linear-gradient(top,  #cbe8ff 49%, #cbe8ff 49%, #006ecc 100%); /* FF3.6+ */
+			background: -webkit-gradient(linear, left top, left bottom, color-stop(49%,#cbe8ff), color-stop(49%,#cbe8ff), color-stop(100%,#006ecc)); /* Chrome,Safari4+ */
+			background: -webkit-linear-gradient(top,  #cbe8ff 49%,#cbe8ff 49%,#006ecc 100%); /* Chrome10+,Safari5.1+ */
+			background: -o-linear-gradient(top,  #cbe8ff 49%,#cbe8ff 49%,#006ecc 100%); /* Opera 11.10+ */
+			background: -ms-linear-gradient(top,  #cbe8ff 49%,#cbe8ff 49%,#006ecc 100%); /* IE10+ */
+			background: linear-gradient(to bottom,  #cbe8ff 49%,#cbe8ff 49%,#006ecc 100%); /* W3C */
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cbe8ff', endColorstr='#006ecc',GradientType=0 ); /* IE6-8 */
+
+			@media screen and (max-width: 768px) {
+				width: 100%;
+			}
+
+			header {
+				h1{
+					text-transform: uppercase;
+					padding-bottom: 1%;
+					font-size: 2.5vw;
+				}
+			}
+			.attire-weather-con {
+				display: table;
+
+				@media screen and (max-width: 768px) {
+					display: block;					
+				}
+
+				.attire, .weather {					
+					width: 47%;
+					margin-left: -4px;
+					margin: 0 1%;
+					display: table-cell;
+
+					@media screen and (max-width: 768px) {
+						display: block;
+						width: 100%;
+					}
+				}
+				.attire {
+					position: relative;
+					border: 2px solid #666;
+
+					.icon-con, .attire-desc {
+						display: inline-block;
+						margin-left: -4px;		
+						position: relative;				
+					}
+					.icon-con {
+						position: absolute;
+						left: -7%;
+					    top: -13%;
+					    width: 35%;
+						vertical-align: middle;
+						border: 5px solid #fff;
+						border-radius: 150px;
+						box-sizing: border-box;
+						padding: 5%;
+						background-color: #ff8752;
+						z-index: 3;
+
+						.icon {							
+							width: 100%;
+						}
+
+						@media screen and (max-width: 768px) {
+							width: 26%;
+						}
+					}
+					.attire-desc {						
+						width: 67%;
+						vertical-align: middle;						
+						padding: 8% 0 8% 36%;
+    					margin-left: -8.3%;
+    					z-index: 2;
+    					font-size: 0.9vw;
+
+    					@media screen and (max-width: 768px) {
+							font-size: 2vw;
+						}
+						@media screen and (max-width: 480px) {
+							font-size: 15px;
+							padding: 3% 0 4% 18%;
+						}
+					}
+				}
+				.spacer	{
+					display: table-cell;
+					width: 1px;
+				}
+				.weather {
+					vertical-align: middle;
+					border: 2px solid #666;					
+					position: relative;
+					cursor: pointer;
+
+					@media screen and (max-width: 768px) {
+						margin: 9% 0;
+					}
+
+					h3 {
+						text-transform: uppercase;					    
+					    text-align: left;
+					    background-color: #CBE8FF;
+					    width: 37%;
+					    margin-left: 3%;
+					    font-size: 1vw;
+					    position: absolute;
+					    top: -21%;
+					    padding-left: 1%;
+
+					    @media screen and (max-width: 768px) {
+							font-size: 3vw;
+							background-color: transparent;
+							top: -32%;
+						}
+					}
+					.icon-con, .temp, .details {
+						display: inline-block;
+						width: 33%;
+						margin-left: -4px;
+						font-size: 0.9vw;
+						vertical-align: middle;
+
+						@media screen and (max-width: 768px) {
+							font-size: 2vw;
+						}
+						@media screen and (max-width: 480px) {
+							font-size: 15px;						
+						}
+					}
+					.temp {
+						font-size: 2vw;
+
+						@media screen and (max-width: 768px) {
+							font-size: 3vw;
+						}
+						@media screen and (max-width: 480px) {
+							font-size: 25px;						
+						}
+					}
+					.icon-con {
+						width: 25%;
+    					margin: 0 auto;
+
+    					.weather-icon {
+    						width: 100%;
+    					}
+					}
+					&.active{
+						background: rgba(0, 0, 0, 0.2); 
+					}
+					&:hover {
+						background: rgba(0, 0, 0, 0.2);
+					}
+				}
+			}
+			.forecast-con {
+				margin-top: 5%;
+				display: table;
+				position: relative;
+
+			  	@media screen and (max-width: 768px) {
+					display: block;
+				}
+
+				h3 {
+					position: absolute;
+				    left: -7%;
+				    top: -12%;				    
+				    background-color: #CBE8FF;
+				    width: 10%;
+				    margin-left: 9%;
+				    font-size: 1vw;
+				    text-transform: uppercase;
+
+				    @media screen and (max-width: 768px) {
+						font-size: 3vw;
+						background-color: transparent;
+						top: -5%;
+						left: -4%;
+					}
+				}
+				.fc {
+					display: table-cell;					
+					border: 2px solid #666;	
+					border-right: none;		
+					width: 20%;		
+					padding: 2% 0;
+					font-size: 0.9vw;
+					cursor: pointer;
+
+					.icon-con {
+						width: 40%;
+    					margin: 0 auto;
+
+						.forecast-icon {
+							width: 100%;
+						}
+					}
+					&.active {
+						background: rgba(0, 0, 0, 0.2); 
+					}
+					&:hover {
+						background: rgba(0, 0, 0, 0.2);
+					}
+
+					@media screen and (max-width: 768px) {
+						display: block;
+						width: 100%;
+						border: 2px solid #666;	
+						margin: 2% 0;
+
+						.icon-con, .temp, .details {
+							display: inline-block;
+							width: 33%;
+							margin-left: -4px;
+							font-size: 0.9vw;
+							vertical-align: middle;
+							font-size: 2vw;							
+						}
+						.temp {
+							font-size: 3vw;
+						}
+						.icon-con {
+							width: 25%;
+						}
+
+
+					}
+					@media screen and (max-width: 480px) {
+						.date {
+							font-size: 20px;
+						}
+						.icon-con, .temp, .details {
+							font-size: 15px;
+						}	
+						.temp {
+							font-size: 25px;
+						}					
+					}
+				}
+				.fc:last-child {
+					border-right: 2px solid #666;	
+				}
+			}
+		}
+	}
+}
