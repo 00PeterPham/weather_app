@@ -30,6 +30,11 @@ body .wrap .inner-wrap {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#cbe8ff', endColorstr='#006ecc', GradientType=0);
   /* IE6-8 */
 }
+@media screen and (max-width: 1024px) {
+  body .wrap .inner-wrap {
+    width: 95%;
+  }
+}
 @media screen and (max-width: 768px) {
   body .wrap .inner-wrap {
     width: 100%;
@@ -39,6 +44,11 @@ body .wrap .inner-wrap header h1 {
   text-transform: uppercase;
   padding-bottom: 1%;
   font-size: 2.5vw;
+}
+@media screen and (max-width: 768px) {
+  body .wrap .inner-wrap header h1 {
+    font-size: 4.5vw;
+  }
 }
 body .wrap .inner-wrap .attire-weather-con {
   display: table;
@@ -250,6 +260,9 @@ body .wrap .inner-wrap .forecast-con .fc:hover {
     width: 100%;
     border: 2px solid #666;
     margin: 2% 0;
+  }
+  body .wrap .inner-wrap .forecast-con .fc .date {
+    font-size: 4vw;
   }
   body .wrap .inner-wrap .forecast-con .fc .icon-con,
   body .wrap .inner-wrap .forecast-con .fc .temp,
