@@ -127,6 +127,18 @@ body .wrap .inner-wrap .attire-weather-con .attire .icon-con {
   background-color: #ff8752;
   z-index: 3;
 }
+body .wrap .inner-wrap .attire-weather-con .attire .icon-con.orange {
+  background-color: #ff8752;
+}
+body .wrap .inner-wrap .attire-weather-con .attire .icon-con.yellow {
+  background-color: #f2cd69;
+}
+body .wrap .inner-wrap .attire-weather-con .attire .icon-con.grey {
+  background-color: #6d6d6d;
+}
+body .wrap .inner-wrap .attire-weather-con .attire .icon-con.blue {
+  background-color: #709ac0;
+}
 body .wrap .inner-wrap .attire-weather-con .attire .icon-con .icon {
   width: 100%;
 }

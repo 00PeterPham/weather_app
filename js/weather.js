@@ -125,29 +125,45 @@ $( document ).ready(function() {
 		var att_icon_url;
 		var att_desc;
 
-		if(temp >= 23){
+		iconBG_clear();
+
+		if(temp >= 23 && desc != "01d" && desc != "10d"){
 			att_icon = "icon-shorts";
-			att_desc = "It's a scorcher! You better get your shorts on and find a pool. Don't forget to bring a towel!"
+			att_desc = "It's a scorcher! You better get your shorts on and find a pool. Don't forget to bring a towel!";
+			$(".attire .icon-con").addClass(" orange");
 		}else if (temp > 20 && temp < 23 && desc != "01d" && desc != "10d"){
 			att_icon = "icon-tshirt";
-			att_desc = "It's pretty hot. Time to show off those arm cannons with some short sleeves."
+			att_desc = "It's pretty hot. Time to show off those arm cannons with some short sleeves.";
+			$(".attire .icon-con").addClass(" yellow");
 		}else if (temp >= 16 && temp <= 20 && desc != "01d" && desc != "10d"){
 			att_icon = "icon-pants";
-			att_desc = "It's pretty warm. Time to show off that denim. Make those pants look good!"
+			att_desc = "It's pretty warm. Time to show off that denim. Make those pants look good!";
+			$(".attire .icon-con").addClass(" grey");
 		}else if (temp < 16 && desc != "01d" && desc != "10d"){
 			att_icon = "icon-jacket";
-			att_desc = "It's kinda chilly. Throw on your favourite jacket and don't forget the attitude."
+			att_desc = "It's kinda chilly. Throw on your favourite jacket and don't forget the attitude.";
+			$(".attire .icon-con").addClass(" grey");
 		}else if (desc == "01d" && desc != "10d"){
 			att_icon = "icon-sunglasses";
-			att_desc = "It's sunny. Time to show off your badass shades. It's called being cool."
+			att_desc = "It's sunny. Time to show off your badass shades. It's called being cool.";
+			$(".attire .icon-con").addClass(" yellow");
 		}else if (desc == "10d"){
 			att_icon = "icon-umbrella";
-			att_desc = "It's Rainy. Grab that umbrella to defend yourself against that downpour."
+			att_desc = "It's Rainy. Grab that umbrella to defend yourself against that downpour.";
+			$(".attire .icon-con").addClass(" blue");
 		}
 
 		att_icon_url = "img/icon-set/"+att_icon+".png";
 		$(".attire .icon-con .icon").attr('src', att_icon_url);
 		$(".attire .attire-desc").html(att_desc);
+	}
+
+	//Removes icon background color
+	function iconBG_clear(){
+		$(".attire .icon-con").removeClass("orange");
+		$(".attire .icon-con").removeClass("yellow");
+		$(".attire .icon-con").removeClass("grey");
+		$(".attire .icon-con").removeClass("blue");
 	}
 
 });
