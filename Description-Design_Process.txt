@@ -42,7 +42,7 @@ The weather details are returned in a JSON, then parsed for specific data. I opt
 - Display Location
 - Add location select
 - Add Morning, noon night, weather/forecasts 
-
+- Create LESS variables for bg, font, border colour
 
 
 

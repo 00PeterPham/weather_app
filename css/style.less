@@ -2,6 +2,7 @@ body {
 	background-color: #ccc;
 	background-image: url(../img/global-bg.jpg);
 	font-family: "Roboto",sans-serif;
+	color: #124673;
 
 	.wrap {
 		.inner-wrap {
@@ -84,7 +85,9 @@ body {
 				}
 				.attire {
 					position: relative;
-					border: 2px solid #666;
+					border: 2px solid #124673;
+					background: rgba(255, 255, 255, 0.2);
+					filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#4cffffff', endColorstr='#4cffffff');
 
 					@media screen and (max-width: 768px) {
 						position: fixed;
@@ -96,12 +99,13 @@ body {
 					.icon-con, .attire-desc {
 						display: inline-block;
 						margin-left: -4px;		
-						position: relative;				
+						position: relative;		
+						font-weight: 700;		
 					}
 					.icon-con {
 						position: absolute;
 						left: -7%;
-					    top: -13%;
+					    top: -14%;
 					    width: 35%;
 						vertical-align: middle;
 						border: 5px solid #fff;
@@ -164,9 +168,11 @@ body {
 				}
 				.weather {
 					vertical-align: middle;
-					border: 2px solid #666;					
+					border: 2px solid #124673;					
 					position: relative;
 					cursor: pointer;
+					background: rgba(255, 255, 255, 0.2);
+					filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#4cffffff', endColorstr='#4cffffff');
 
 					@media screen and (max-width: 768px) {
 						margin: 9% 0;
@@ -180,7 +186,7 @@ body {
 					    margin-left: 3%;
 					    font-size: 1vw;
 					    position: absolute;
-					    top: -21%;
+					    top: -27%;
 					    padding-left: 1%;
 
 					    @media screen and (max-width: 768px) {
@@ -207,7 +213,7 @@ body {
 						font-size: 2vw;
 
 						@media screen and (max-width: 768px) {
-							font-size: 3vw;
+							font-size: 8vw;
 						}
 						@media screen and (max-width: 480px) {
 							font-size: 25px;						
@@ -216,10 +222,14 @@ body {
 					.icon-con {
 						width: 25%;
     					margin: 0 auto;
+    					background-color: #177CD2;
+    					border-radius: 100px;    	
+    					padding: 0 1%;				
+						margin: 1% 0;
 
     					.weather-icon {
     						width: 100%;
-    					}    					
+    					}    
 					}
 					&.active{
 						background: rgba(0, 0, 0, 0.2); 
@@ -260,31 +270,41 @@ body {
 				}				
 				.fc {
 					display: table-cell;					
-					border: 2px solid #666;	
+					border: 2px solid #124673;	
 					border-right: none;		
 					width: 20%;		
 					padding: 2% 0;
 					font-size: 0.9vw;
 					cursor: pointer;
+					background: rgba(255, 255, 255, 0.2);
+					filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#4cffffff', endColorstr='#4cffffff');
 
 					.icon-con {
 						width: 40%;
     					margin: 0 auto;
+    					background-color: #177CD2;
+    					border-radius: 100px;
+    					padding: 10% 11%;
 
 						.forecast-icon {
 							width: 100%;
 						}
+
+						@media screen and (max-width: 768px) {
+							padding: 2% 3%;
+						}
 					}
 					&.active {
 						background: rgba(0, 0, 0, 0.2); 
-						filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#4cffffff', endColorstr='#4cffffff');
+						filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#4c000000', endColorstr='#4c000000');
 					}
 					&:hover {
 						background: rgba(0, 0, 0, 0.2);
-						filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#4cffffff', endColorstr='#4cffffff');
+						filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#4c000000', endColorstr='#4c000000');
 					}
 
 					.date {
+						font-weight: 700;
 						@media screen and (max-width: 768px) {
 							font-size: 4vw;
 						}
@@ -307,8 +327,9 @@ body {
 						}
 					}
 					.temp {
+						font-weight: 700;
 						@media screen and (max-width: 768px) {
-							font-size: 3vw;
+							font-size: 8vw;
 						}
 						@media screen and (max-width: 480px) {
 							font-size: 25px;

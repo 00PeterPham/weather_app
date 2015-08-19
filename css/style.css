@@ -2,6 +2,7 @@ body {
   background-color: #ccc;
   background-image: url(../img/global-bg.jpg);
   font-family: "Roboto", sans-serif;
+  color: #124673;
 }
 body .wrap .inner-wrap {
   width: 70%;
@@ -98,7 +99,9 @@ body .wrap .inner-wrap .attire-weather-con .weather {
 }
 body .wrap .inner-wrap .attire-weather-con .attire {
   position: relative;
-  border: 2px solid #666;
+  border: 2px solid #124673;
+  background: rgba(255, 255, 255, 0.2);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr='#4cffffff', endColorstr='#4cffffff');
 }
 @media screen and (max-width: 768px) {
   body .wrap .inner-wrap .attire-weather-con .attire {
@@ -113,11 +116,12 @@ body .wrap .inner-wrap .attire-weather-con .attire .attire-desc {
   display: inline-block;
   margin-left: -4px;
   position: relative;
+  font-weight: 700;
 }
 body .wrap .inner-wrap .attire-weather-con .attire .icon-con {
   position: absolute;
   left: -7%;
-  top: -13%;
+  top: -14%;
   width: 35%;
   vertical-align: middle;
   border: 5px solid #fff;
@@ -184,9 +188,11 @@ body .wrap .inner-wrap .attire-weather-con .spacer {
 }
 body .wrap .inner-wrap .attire-weather-con .weather {
   vertical-align: middle;
-  border: 2px solid #666;
+  border: 2px solid #124673;
   position: relative;
   cursor: pointer;
+  background: rgba(255, 255, 255, 0.2);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr='#4cffffff', endColorstr='#4cffffff');
 }
 @media screen and (max-width: 768px) {
   body .wrap .inner-wrap .attire-weather-con .weather {
@@ -201,7 +207,7 @@ body .wrap .inner-wrap .attire-weather-con .weather h3 {
   margin-left: 3%;
   font-size: 1vw;
   position: absolute;
-  top: -21%;
+  top: -27%;
   padding-left: 1%;
 }
 @media screen and (max-width: 768px) {
@@ -239,7 +245,7 @@ body .wrap .inner-wrap .attire-weather-con .weather .temp {
 }
 @media screen and (max-width: 768px) {
   body .wrap .inner-wrap .attire-weather-con .weather .temp {
-    font-size: 3vw;
+    font-size: 8vw;
   }
 }
 @media screen and (max-width: 480px) {
@@ -250,6 +256,10 @@ body .wrap .inner-wrap .attire-weather-con .weather .temp {
 body .wrap .inner-wrap .attire-weather-con .weather .icon-con {
   width: 25%;
   margin: 0 auto;
+  background-color: #177CD2;
+  border-radius: 100px;
+  padding: 0 1%;
+  margin: 1% 0;
 }
 body .wrap .inner-wrap .attire-weather-con .weather .icon-con .weather-icon {
   width: 100%;
@@ -293,27 +303,40 @@ body .wrap .inner-wrap .forecast-con h3 {
 }
 body .wrap .inner-wrap .forecast-con .fc {
   display: table-cell;
-  border: 2px solid #666;
+  border: 2px solid #124673;
   border-right: none;
   width: 20%;
   padding: 2% 0;
   font-size: 0.9vw;
   cursor: pointer;
+  background: rgba(255, 255, 255, 0.2);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr='#4cffffff', endColorstr='#4cffffff');
 }
 body .wrap .inner-wrap .forecast-con .fc .icon-con {
   width: 40%;
   margin: 0 auto;
+  background-color: #177CD2;
+  border-radius: 100px;
+  padding: 10% 11%;
 }
 body .wrap .inner-wrap .forecast-con .fc .icon-con .forecast-icon {
   width: 100%;
 }
+@media screen and (max-width: 768px) {
+  body .wrap .inner-wrap .forecast-con .fc .icon-con {
+    padding: 2% 3%;
+  }
+}
 body .wrap .inner-wrap .forecast-con .fc.active {
   background: rgba(0, 0, 0, 0.2);
-  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr='#4cffffff', endColorstr='#4cffffff');
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr='#4c000000', endColorstr='#4c000000');
 }
 body .wrap .inner-wrap .forecast-con .fc:hover {
   background: rgba(0, 0, 0, 0.2);
-  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr='#4cffffff', endColorstr='#4cffffff');
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr='#4c000000', endColorstr='#4c000000');
+}
+body .wrap .inner-wrap .forecast-con .fc .date {
+  font-weight: 700;
 }
 @media screen and (max-width: 768px) {
   body .wrap .inner-wrap .forecast-con .fc .date {
@@ -344,9 +367,12 @@ body .wrap .inner-wrap .forecast-con .fc:hover {
     font-size: 15px;
   }
 }
+body .wrap .inner-wrap .forecast-con .fc .temp {
+  font-weight: 700;
+}
 @media screen and (max-width: 768px) {
   body .wrap .inner-wrap .forecast-con .fc .temp {
-    font-size: 3vw;
+    font-size: 8vw;
   }
 }
 @media screen and (max-width: 480px) {
