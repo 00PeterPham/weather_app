@@ -1,0 +1,30 @@
+Everyday I wake up and check my phone's weather app. However, I realized that I was checking the app, not so much for the weather conditions, but what to wear for the day.
+So I decided to create a weather app that was able to suggest what to wear based on weather conditions.
+ 
+This weather app uses the 'open weather map api' from http://openweathermap.org/.
+
+I wanted this to be accessible across platforms so I decided to make this responsive and mobile friendly, 
+using LESS and jquery-1.11.3, opting out of jquery-2+ because it does not support IE8.
+
+The main scope of this app was to quickly convey 2 things:
+1. What is the temperature for today?
+2. What should I wear?
+
+These 2 objectives are addressed with the top 2 blocks on the page. The 'attire block' (on the left) changes based on a combination of the temperature and weather conditions (ie. Sunny, Rainy, etc..)
+This allows the user to make a very quick decision based on one image. They are also able to click the 'weather blocks' and the 'attire block' will change accordingly.
+
+If the user requires more information about the day's weather the 'Today's Weather block' displays the weather conditions via an icon, temperature and short details.
+
+--HTML/CSS:--
+
+-I decided to use 'display: table-cell' on the blocks instead of floating them or using 'display: inline-block' in order to keep the blocks aligned with each other even if the content were to change.
+For example, if the copy in the 'attire block' were to increase in length and increase the height of the borders, the 'Today's Weather block' would compensate and do the same, keeping aligned.
+
+ This creates a more robust structure to handle changing content.
+
+-The element widths, margins padding and height all use percentage, and font-size uses VW in order to provide the responsive behaviour. 
+ Breakpoints were placed at: 1024px (tablet landscape), 768px (tablet portrait), 480px (mobile portrait), 320px (mobile portrait small) and the 'weather blocks' were moved from inline to stacked for an improved mobile experience.
+
+
+
+

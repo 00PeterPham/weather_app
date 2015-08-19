@@ -1,0 +1,4 @@
+1. Download all files into one folder
+2. Open the 'index.html' file on your favourite browser
+
+*This app is also hosted, and can be viewed here: http://peter-pham.com/weather_app/

@@ -1,3 +1,5 @@
+// This weather app uses the 'open weather map api' from http://openweathermap.org/
+
 var APIKEY = 'c04b3040979ba35420fd409afed8b3cc';
 
 $( document ).ready(function() {  
@@ -109,6 +111,7 @@ $( document ).ready(function() {
 		});
 	}
 
+	//Changes Attire Icon and Attire Description
 	function getIcon(temp, desc) {
 		var att_icon;
 		var att_icon_url;
@@ -119,19 +122,19 @@ $( document ).ready(function() {
 			att_desc = "It's a scorcher! You better get your shorts on and find a pool. Don't forget to bring a towel!"
 		}else if (temp > 20 && temp < 23 && desc != "01d" && desc != "10d"){
 			att_icon = "icon-tshirt";
-			att_desc = "It's pretty hot today. Time to show off those arm cannons with some short sleeves."
+			att_desc = "It's pretty hot. Time to show off those arm cannons with some short sleeves."
 		}else if (temp >= 16 && temp <= 20 && desc != "01d" && desc != "10d"){
 			att_icon = "icon-pants";
-			att_desc = "It's pretty warm today. Time to show off that denim. Make those pants look good!"
+			att_desc = "It's pretty warm. Time to show off that denim. Make those pants look good!"
 		}else if (temp < 16 && desc != "01d" && desc != "10d"){
 			att_icon = "icon-jacket";
-			att_desc = "It's kinda chilly today. Throw on your favourite jacket and don't forget the attitude."
+			att_desc = "It's kinda chilly. Throw on your favourite jacket and don't forget the attitude."
 		}else if (desc == "01d" && desc != "10d"){
 			att_icon = "icon-sunglasses";
-			att_desc = "It's sunny today. Time to show off your badass shades. It's called being cool."
+			att_desc = "It's sunny. Time to show off your badass shades. It's called being cool."
 		}else if (desc == "10d"){
 			att_icon = "icon-umbrella";
-			att_desc = "It's Rainy today. Grab that umbrella to defend yourself against that downpour."
+			att_desc = "It's Rainy. Grab that umbrella to defend yourself against that downpour."
 		}
 
 		att_icon_url = "img/icon-set/"+att_icon+".png";
