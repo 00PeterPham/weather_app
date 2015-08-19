@@ -304,15 +304,16 @@ body .wrap .inner-wrap .forecast-con .fc:hover {
   filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr='#4cffffff', endColorstr='#4cffffff');
 }
 @media screen and (max-width: 768px) {
-  body .wrap .inner-wrap .forecast-con .fc {
-    display: block;
-    width: 100%;
-    border: 2px solid #666;
-    margin: 2% 0;
-  }
   body .wrap .inner-wrap .forecast-con .fc .date {
     font-size: 4vw;
   }
+}
+@media screen and (max-width: 480px) {
+  body .wrap .inner-wrap .forecast-con .fc .date {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 768px) {
   body .wrap .inner-wrap .forecast-con .fc .icon-con,
   body .wrap .inner-wrap .forecast-con .fc .temp,
   body .wrap .inner-wrap .forecast-con .fc .details {
@@ -323,24 +324,35 @@ body .wrap .inner-wrap .forecast-con .fc:hover {
     vertical-align: middle;
     font-size: 2vw;
   }
-  body .wrap .inner-wrap .forecast-con .fc .temp {
-    font-size: 3vw;
-  }
-  body .wrap .inner-wrap .forecast-con .fc .icon-con {
-    width: 25%;
-  }
 }
 @media screen and (max-width: 480px) {
-  body .wrap .inner-wrap .forecast-con .fc .date {
-    font-size: 20px;
-  }
   body .wrap .inner-wrap .forecast-con .fc .icon-con,
   body .wrap .inner-wrap .forecast-con .fc .temp,
   body .wrap .inner-wrap .forecast-con .fc .details {
     font-size: 15px;
   }
+}
+@media screen and (max-width: 768px) {
+  body .wrap .inner-wrap .forecast-con .fc .temp {
+    font-size: 3vw;
+  }
+}
+@media screen and (max-width: 480px) {
   body .wrap .inner-wrap .forecast-con .fc .temp {
     font-size: 25px;
+  }
+}
+@media screen and (max-width: 768px) {
+  body .wrap .inner-wrap .forecast-con .fc .icon-con {
+    width: 25%;
+  }
+}
+@media screen and (max-width: 768px) {
+  body .wrap .inner-wrap .forecast-con .fc {
+    display: block;
+    width: 100%;
+    border: 2px solid #666;
+    margin: 2% 0;
   }
 }
 body .wrap .inner-wrap .forecast-con .forecast-5 {

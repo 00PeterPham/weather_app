@@ -33,13 +33,15 @@ $( document ).ready(function() {
 		    	$("img.weather-icon").attr('src', w_icon_url);
 		    	$(".weather .temp").html(w_temp.toFixed(0) + "&#8451;");		    	
 		    	$(".weather .details .desc").html(w_desc);
-		    	$(".weather .details .humidity").html(w_humidity + " %");
-		    	$(".weather .details .wind").html(w_wind.toFixed(0) + " km/h");
+		    	$(".weather .details .humidity").html("humidty: " + w_humidity + " %");
+		    	$(".weather .details .wind").html("wind: " + w_wind.toFixed(0) + " km/h");
 
-
+		    	//Applies styling when weather block is clicked
 		        $(".weather").click(function(){ 
 		        	$(".forecast-con .fc").removeClass(" active");		        	
 		        	$(this).toggleClass(" active");	
+
+		        	//Changes attire icon
 					getIcon(w_temp, w_weather_icon);		        	
 		        });		     
 		    }
@@ -64,6 +66,7 @@ $( document ).ready(function() {
 
 		    	var j = 1;
 
+		    	//Loops through weather json from Open Weather Map
 		    	for (i = 0; i < f_list.length; i++) { 
 		    		f_list_time = f_list[i].dt_txt.split(" ");		    		
 		    		f_list_array[i] = f_list_time[1];
@@ -78,6 +81,7 @@ $( document ).ready(function() {
 				    	f_desc = f_list[i].weather[0].description;
 				    	f_humidity = f_list[i].main.humidity;
 				    	f_wind = f_list[i].wind.speed;	
+
 				    	//Retrieves Forecast Day
 				    	f_date = Date.parse(forecast_date);
 				    	f_day = f_date.toString().split(" ");
@@ -87,13 +91,14 @@ $( document ).ready(function() {
 				    	$(".forecast-con .forecast-"+j+" .forecast-icon").attr('src', f_icon_url);
 				    	$(".forecast-con .forecast-"+j+" .temp").html(f_temp.toFixed(0) + "&#8451;");
 				    	$(".forecast-con .forecast-"+j+" .desc").html(f_desc);
-				    	$(".forecast-con .forecast-"+j+" .humidity").html(f_humidity + " %");
-				    	$(".forecast-con .forecast-"+j+" .wind").html(f_wind.toFixed(0) + " km/h");
+				    	$(".forecast-con .forecast-"+j+" .humidity").html("humidty: " +f_humidity + " %");
+				    	$(".forecast-con .forecast-"+j+" .wind").html("wind: " +f_wind.toFixed(0) + " km/h");
 
 				    	j++;
 				    }
 				}
 
+				//Retrieves forecast block weather details
 		        $(".forecast-con .fc").click(function(){
 		        	var fc_temp = $(this).children(".temp").html();
 		        	var fc_temp_val = parseInt(fc_temp);
@@ -102,9 +107,12 @@ $( document ).ready(function() {
 		        	var fc_icon_src_string = fc_icon_src[0].toString();
 		        	var fc_icon_val = fc_icon_src_string.substr(fc_icon_src_string.length - 3);
 
+		        	//Applies styling when forecast block is clicked
 		        	$(".weather").removeClass(" active");
 		        	$(".forecast-con .fc").removeClass(" active");
 		        	$(this).toggleClass(" active");
+
+		        	//Changes attire icon
 		        	getIcon(fc_temp_val, fc_icon_val);
 		        });		        
 		    }

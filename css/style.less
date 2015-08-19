@@ -271,42 +271,47 @@ body {
 						filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#4cffffff', endColorstr='#4cffffff');
 					}
 
-					@media screen and (max-width: 768px) {
-						display: block;
-						width: 100%;
-						border: 2px solid #666;	
-						margin: 2% 0;
-
-						.date {
+					.date {
+						@media screen and (max-width: 768px) {
 							font-size: 4vw;
 						}
-						.icon-con, .temp, .details {
+						@media screen and (max-width: 480px) {
+							font-size: 20px;
+						}
+					}
+
+					.icon-con, .temp, .details {
+						@media screen and (max-width: 768px) {
 							display: inline-block;
 							width: 33%;
 							margin-left: -4px;
 							font-size: 0.9vw;
 							vertical-align: middle;
-							font-size: 2vw;							
+							font-size: 2vw;	
 						}
-						.temp {
+						@media screen and (max-width: 480px) {
+							font-size: 15px;
+						}
+					}
+					.temp {
+						@media screen and (max-width: 768px) {
 							font-size: 3vw;
 						}
-						.icon-con {
+						@media screen and (max-width: 480px) {
+							font-size: 25px;
+						}
+					}
+					.icon-con {
+						@media screen and (max-width: 768px) {
 							width: 25%;
 						}
-
-
 					}
-					@media screen and (max-width: 480px) {
-						.date {
-							font-size: 20px;
-						}
-						.icon-con, .temp, .details {
-							font-size: 15px;
-						}	
-						.temp {
-							font-size: 25px;
-						}					
+
+					@media screen and (max-width: 768px) {
+						display: block;
+						width: 100%;
+						border: 2px solid #666;	
+						margin: 2% 0;
 					}
 				}
 				.forecast-5 {

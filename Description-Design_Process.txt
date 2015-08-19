@@ -23,7 +23,26 @@ For example, if the copy in the 'attire block' were to increase in length and in
  This creates a more robust structure to handle changing content.
 
 -The element widths, margins padding and height all use percentage, and font-size uses VW in order to provide the responsive behaviour. 
- Breakpoints were placed at: 1024px (tablet landscape), 768px (tablet portrait), 480px (mobile portrait), 320px (mobile portrait small) and the 'weather blocks' were moved from inline to stacked for an improved mobile experience.
+ Breakpoints were placed at: 1024px (tablet landscape), 768px (tablet portrait), 480px (mobile portrait), 320px (mobile portrait small) 
+ Mobile: The 'weather blocks' were moved from inline to stacked for an improved mobile experience and the 'attire block' fixed.
+
+--Javascript--
+
+The app first retrieves the users city and country using their ip. This in turn is used with the API call to 'Open Weather Map' to retrieve the region's weather details.
+The weather details are returned in a JSON, then parsed for specific data. I opted to use a minimal amount of storage arrays to reduce the load on the javasscript.
+
+-Functions were used to modulate the behvaiour as much as possible in the given time frame. 
+-Only one global variable was used, in order to not pollute the global name space
+
+--Future Revisions--
+
+- Create function for assigning data to html
+- Seperate js functions into seperate files
+- Create seperate JSON for attire description
+- Display Location
+- Add location select
+- Add Morning, noon night, weather/forecasts 
+
 
 
 
